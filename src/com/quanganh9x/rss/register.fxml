@@ -1,0 +1,66 @@
+<?language javascript?>
+
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:controller="com.quanganh9x.rss.RegisterController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="25" vgap="25" styleClass="login">
+    <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+    <gridLinesVisible>true</gridLinesVisible>
+    <children>
+        <Text text="Register"
+              GridPane.columnIndex="0" GridPane.rowIndex="0"
+              GridPane.columnSpan="2">
+        </Text>
+
+        <Label text="Username:"
+               GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+        <TextField fx:id="userLogin" promptText="Username"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Password:"
+               GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+        <PasswordField fx:id="passLogin" promptText="Password"
+                       GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Retype password:"
+               GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+        <PasswordField fx:id="passSecLogin" promptText="Password"
+                       GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <Label text="Email:"
+               GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+
+        <TextField fx:id="emailLogin" promptText="Email"
+                   GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+        <Label text="Fullname:"
+               GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+
+        <TextField fx:id="nameLogin" promptText="Full Name"
+                   GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+        <CheckBox fx:id="stronglyAgreeWithThatThing" GridPane.columnIndex="1" GridPane.rowIndex="6" maxWidth="480">
+            I strongly, aggressively agree that I will follow the "Anyone but Stefan Esser license - KJC 2017"
+        </CheckBox>
+
+        <HBox spacing="10" alignment="bottom_left"
+              GridPane.columnIndex="0" GridPane.rowIndex="7">
+            <Button text="Proceed" onAction="#goRegister"/>
+        </HBox>
+        <Hyperlink text="Reset" GridPane.columnIndex="1" GridPane.rowIndex="7" onMouseClicked="#goReset"/>
+    </children>
+    <children>
+        <Text fx:id="debug"
+              GridPane.columnIndex="0" GridPane.rowIndex="8">
+        </Text>
+    </children>
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+</GridPane>

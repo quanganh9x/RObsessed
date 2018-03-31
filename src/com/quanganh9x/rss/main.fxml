@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<SplitPane fx:id="splitMain" dividerPositions="0.10025062656641603" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quanganh9x.rss.MainController">
+  <items>
+    <AnchorPane fx:id="UserManager" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="1318.0" SplitPane.resizableWithParent="false" />
+      <SplitPane dividerPositions="0.3004694835680751" prefHeight="571.0" prefWidth="1278.0" SplitPane.resizableWithParent="false">
+        <items>
+            <TabPane prefHeight="714.0" prefWidth="355.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="ListRss" text="RSS名單">
+
+                </Tab>
+                  <Tab fx:id="advance" text="fremskreden">
+                     <content>
+                        <VBox opacity="0.8" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#showConf" prefHeight="40.0" prefWidth="380.0" text="Show configuration file" />
+                               <Button mnemonicParsing="false" onAction="#showSource" prefHeight="40.0" prefWidth="380.0" text="Source code" />
+                              <Button mnemonicParsing="false" onAction="#showDest" prefHeight="23.0" prefWidth="380.0" text="Exit!" textFill="#ff1500" underline="true">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="fxCopy" alignment="CENTER" prefHeight="40.0" prefWidth="390.0" text="COPYRIGHT" />
+                              <TextArea editable="false" prefHeight="288.0" prefWidth="380.0" text="(+) Changelog&#10;v1.0 (31/3/2018):&#10;- Initial release&#10;- Features:&#10;+ RSS methods for VNExpress, Dantri ... works &lt;just&gt; fine&#10;+ Add &amp; store RSS elements&#10;+ Login with account (default root)&#10;- Known bugs:&#10;+ Memleak happens occassionally :/ currently investigating&#10;+ Illegal exceptions &amp; Malformed URLs thrown when &#10;adding RSS (not yet checked)&#10;- Upcoming:&#10;+ Delete RSS elements&#10;+ Fixes for known bugs and continue bughunting :/ *sign*&#10;+ Reduce the complexity of codebase&#10;+ Fancy things ?" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <SplitPane dividerPositions="0.09103641456582633" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+              <items>
+                  <ToolBar fx:id="tools" prefHeight="249.0" prefWidth="878.0" SplitPane.resizableWithParent="false">
+                    <items>
+                      <Button mnemonicParsing="false" onMouseClicked="#addRss" text="Add RSS" />
+                        <Button mnemonicParsing="false" onMouseClicked="#editRss" text="Edit RSS" />
+                    </items>
+                  </ToolBar>
+                <AnchorPane fx:id="ListRssExpanded" minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="878.0" SplitPane.resizableWithParent="false">
+                <padding><Insets bottom="10" left="10" right="10" top="10" /></padding>
+                </AnchorPane>
+              </items>
+            </SplitPane>
+        </items>
+      </SplitPane>
+  </items>
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+</SplitPane>

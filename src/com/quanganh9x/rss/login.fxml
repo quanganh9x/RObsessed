@@ -1,0 +1,43 @@
+<?language javascript?>
+
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:controller="com.quanganh9x.rss.LoginController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="25" vgap="25" styleClass="login">
+    <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+    <children>
+    <Text text="Wëllkomm"
+          GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="2">
+    </Text>
+
+    <Label text="όνομα χρήστη"
+           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+    <TextField fx:id="userLogin" promptText="Username"
+            GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="كلمه السر"
+           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+    <PasswordField fx:id="passLogin" promptText="Password"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <HBox spacing="10" alignment="bottom_left"
+          GridPane.columnIndex="0" GridPane.rowIndex="4">
+        <Button text="Iniciar sesión" onAction="#goLogin"/>
+    </HBox>
+    <Hyperlink disable="true" text="ਰਜਿਸਟਰ (not yet implemented)" GridPane.columnIndex="0" GridPane.rowIndex="5" onMouseClicked="#goRegister"/>
+    </children>
+    <children>
+        <Text fx:id="debug"
+              GridPane.columnIndex="0" GridPane.rowIndex="6">
+        </Text>
+    </children>
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+</GridPane>

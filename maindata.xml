@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <user>root</user>
+  <data>
+    <sites>
+      <name>VNExpress - Tin moi nhat</name>
+      <url>https://vnexpress.net/rss/tin-moi-nhat.rss</url>
+    </sites>
+    <sites>
+      <name>DanTri</name>
+      <url>http://dantri.com.vn/xa-hoi/ho-so.rss</url>
+    </sites>
+    <sites>
+      <name>Suc khoe</name>
+      <url>https://vnexpress.net/rss/suc-khoe.rss</url>
+    </sites>
+  </data>
+</root>
